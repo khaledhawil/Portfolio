@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Khaled Hawil - DevOps & Cloud Engineer with AWS certification. System Administrator at AlKhwarizmi.ai specializing in high-availability infrastructure, Linux administration, and CI/CD automation.">
-    <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Kubernetes, Docker, Terraform, Ansible, Jenkins, GitOps, ArgoCD, Linux">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Khaled Hawil - DevOps & Cloud Engineer with AWS certification. 1 year experience, 12 weeks training, 3 major projects. Specializing in cloud infrastructure, CI/CD automation, and Linux administration.">
+    <meta name="keywords" content="DevOps, Cloud Engineer, AWS Certified, Kubernetes, Docker, CI/CD, Infrastructure, Linux Administration">
     <meta name="author" content="Khaled Hawil">
+    <meta name="theme-color" content="#ff4757">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Performance hints -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Khaled Hawil - DevOps & Cloud Engineer Portfolio">
@@ -21,19 +30,100 @@
     
     <title>Khaled Hawil - DevOps & Cloud Engineer Portfolio</title>
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Critical CSS - Inlined for performance -->
+    <style>
+        /* Critical above-the-fold styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a; 
+            color: #fff; 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .navbar { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero { 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            position: relative;
+        }
+    </style>
+    
+    <!-- Loading screen for better UX -->
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 71, 87, 0.3);
+            border-top: 3px solid #ff4757;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        body.loaded .loading-screen {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+    
+    <!-- Stylesheets - Load non-blocking -->
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="assets/images/Profile-pic.jpg" as="image">
     
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.svg">
+    <link rel="manifest" href="assets/images/site.webmanifest">
 </head>
 <body>
-    <!-- DevOps Background Elements -->
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Enhanced Dynamic Background Elements -->
     <div class="devops-patterns"></div>
+    
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Geometric Background -->
+    <div class="geometric-bg">
+        <div class="geometric-shape"></div>
+        <div class="geometric-shape"></div>
+        <div class="geometric-shape"></div>
+    </div>
+    
     <div class="tech-background">
         <!-- Core DevOps Tools -->
         <div class="tech-icon tech-aws"><i class="fab fa-aws"></i></div>
@@ -48,19 +138,7 @@
         <!-- Additional Professional DevOps Icons -->
         <div class="tech-icon tech-jenkins"><i class="fas fa-cogs"></i></div>
         <div class="tech-icon tech-terraform"><i class="fas fa-cubes"></i></div>
-        <div class="tech-icon tech-ansible"><i class="fas fa-robot"></i></div>
-        <div class="tech-icon tech-monitoring"><i class="fas fa-chart-line"></i></div>
-        <div class="tech-icon tech-security"><i class="fas fa-shield-alt"></i></div>
-        <div class="tech-icon tech-database"><i class="fas fa-database"></i></div>
-        <div class="tech-icon tech-network"><i class="fas fa-network-wired"></i></div>
-        <div class="tech-icon tech-pipeline"><i class="fas fa-project-diagram"></i></div>
-        <div class="tech-icon tech-container"><i class="fas fa-box"></i></div>
-        <div class="tech-icon tech-automation"><i class="fas fa-magic"></i></div>
-        <div class="tech-icon tech-ci-cd"><i class="fas fa-sync-alt"></i></div>
-        <div class="tech-icon tech-load-balancer"><i class="fas fa-balance-scale"></i></div>
     </div>
-    <div class="devops-watermark">DEVOPS</div>
-    <div class="code-watermark">{"cloud": "infrastructure"}</div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -126,9 +204,10 @@
                     <h3>DevOps & Cloud Engineer | AWS Certified</h3>
                     <p>
                         DevOps & Cloud Engineer with 1 year of hands-on experience in cloud infrastructure and Linux administration.
+                        Completed an intensive 12-week DevOps training program, gaining practical skills in containerization, CI/CD pipelines, and infrastructure automation.
                         Currently working as System Administrator at AlKhwarizmi.ai, managing infrastructure across Linux and Windows environments. 
-                        AWS Certified Cloud Practitioner with practical experience in containerization, CI/CD pipelines, and infrastructure management.
-                        Passionate about learning and implementing modern DevOps practices and cloud technologies.
+                        AWS Certified Cloud Practitioner with hands-on experience in 3 major projects spanning cloud migration, microservices deployment, and automated infrastructure management.
+                        Passionate about implementing modern DevOps practices and cloud-native technologies.
                     </p>
                     <div class="skills-grid">
                         <div class="skill-category">
@@ -636,6 +715,18 @@
     </footer>
 
     <!-- Scripts -->
+    <script>
+        // Fast loading optimization
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            // Remove loading screen after animation
+            setTimeout(() => {
+                const loadingScreen = document.querySelector('.loading-screen');
+                if (loadingScreen) loadingScreen.remove();
+            }, 500);
+        });
+    </script>
+    <script src="js/background.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/contact.js"></script>
