@@ -1,0 +1,63 @@
+# GitHub Pages Configuration
+# Portfolio: Khaled Hawil - DevOps & Cloud Engineer
+
+# Site settings
+title: "Khaled Hawil - DevOps & Cloud Engineer"
+description: "Professional DevOps & Cloud Engineer portfolio showcasing AWS expertise, Linux administration, and infrastructure automation"
+url: "https://khaledhawil.github.io"
+baseurl: "/Portfolio"
+
+# Author information
+author:
+  name: "Khaled Hawil"
+  email: "khaledhawil@outlook.com"
+  github: "khaledhawil"
+  linkedin: "khaledhawil"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - package.json
+  - node_modules/
+  - vendor/
+  - .github/
+  - README.md
+  - "*.log"
+
+# Include files
+include:
+  - .htaccess
+
+# GitHub Pages specific
+github: [metadata]
+encoding: UTF-8
+safe: true
+incremental: false
+
+# SEO settings
+social:
+  name: Khaled Hawil
+  links:
+    - https://github.com/khaledhawil
+    - https://linkedin.com/in/khaledhawil
+
+# Analytics (optional - add your Google Analytics ID)
+# google_analytics: G-XXXXXXXXXX
+    - https://github.com/khaledhawil
+    - https://linkedin.com/in/khaledhawil
+
+# Google Analytics (add your tracking ID when ready)
+# google_analytics: UA-XXXXXXXX-X
+
+# Additional metadata
+lang: en_US
+timezone: Africa/Cairo

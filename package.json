@@ -1,0 +1,38 @@
+{
+  "name": "khaled-hawil-portfolio",
+  "version": "2.0.0",
+  "description": "Professional DevOps & Cloud Engineer Portfolio for Khaled Hawil - Modern, responsive, and optimized for GitHub Pages",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "portfolio",
+    "devops",
+    "cloud-engineer",
+    "github-pages",
+    "aws",
+    "kubernetes",
+    "docker",
+    "ci-cd"
+  ],
+  "author": {
+    "name": "Khaled Hawil",
+    "email": "khaledhawil@outlook.com",
+    "url": "https://khaledhawil.github.io/Portfolio"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khaledhawil/Portfolio.git"
+  },
+  "homepage": "https://khaledhawil.github.io/Portfolio",
+  "files": [
+    "index.html",
+    "css/",
+    "js/",
+    "assets/",
+    "README.md"
+  ]
+}

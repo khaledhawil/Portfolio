@@ -1,0 +1,203 @@
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: var(--z-index-fixed);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: background var(--transition-fast);
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.98);
+}
+
+.nav-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+    position: relative;
+}
+
+.logo-text {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    position: relative;
+}
+
+.logo-text::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: -5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    bottom: -5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xl);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-fast);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background: var(--primary-alpha);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.nav-link i {
+    font-size: var(--font-size-sm);
+}
+
+/* Mobile Navigation */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    background: transparent;
+    border: none;
+    position: relative;
+    z-index: var(--z-index-popover);
+}
+
+.hamburger:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 3px 0;
+    transition: var(--transition-fast);
+    border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(10, 10, 10, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: left var(--transition-fast);
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(10px);
+        padding: var(--spacing-xl) 0;
+        gap: var(--spacing-md);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        padding: var(--spacing-md) var(--spacing-xl);
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-link.active::after {
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+}
+
+/* Navigation Animation */
+.nav-menu {
+    animation: slideInRight var(--transition-medium);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        animation: none;
+    }
+    
+    .nav-menu.active {
+        animation: slideInLeft var(--transition-fast);
+    }
+}

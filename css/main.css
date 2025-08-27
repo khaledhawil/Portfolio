@@ -1,0 +1,54 @@
+/* Main Stylesheet - Portfolio */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Import Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* Import CSS Modules */
+@import 'base.css';
+@import 'navigation.css';
+@import 'hero.css';
+@import 'about.css';
+@import 'services.css';
+@import 'portfolio.css';
+@import 'experience.css';
+@import 'certifications.css';
+@import 'contact.css';
+@import 'footer.css';
+
+/* Global Overrides and Custom Styles */
+body.loaded {
+    overflow: visible;
+}
+
+body.loaded .loading {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .scroll-indicator,
+    .particles,
+    .contact-form {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero,
+    .about,
+    .services,
+    .portfolio,
+    .contact {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
